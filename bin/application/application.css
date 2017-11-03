@@ -1,0 +1,43 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root{
+	-fx-background-color: #BFBD9F;
+}
+
+#border{
+	-fx-background-color: #333333;
+
+}
+
+#user {
+  -fx-font-family: 'FontAwesome';
+  -fx-font-size: 24.0;
+  -fx-color: white;
+}
+#hbox{
+    -fx-max-height: 49.0px;
+    -fx-min-width: 100%;
+    -fx-min-height: 49.0px;
+    -fx-border-width: 3px;
+    -fx-border-style: dashed ;
+    -fx-border-color:#333333; 
+    -fx-padding: 7px;
+    -fx-background-color: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2), rgba(255,255,255,0.24), rgba(255,255,255,0.1));
+}
+
+.button{
+	 -fx-font-family: 'FontAwesome';
+	 -fx-background-color: rgba(255,255,255,0.01);
+	 -fx-border-radius: 5;
+	 -fx-background-radius: 5;
+	 -fx-text-fill: white;
+	 -fx-pref-height: 3px;
+	 -fx-pref-width: 3px;
+	 
+}
+
+.label{
+	-fx-font-size: 24.0;
+	-fx-padding: 2px;
+	-fx-text-fill: white;
+}
