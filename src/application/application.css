@@ -12,11 +12,12 @@
 #user {
   -fx-font-family: 'FontAwesome';
   -fx-font-size: 24.0;
-  -fx-color: white;
+  -fx-text-fill: white;
 }
-#hbox{
+#floor{
     -fx-max-height: 49.0px;
-    -fx-min-width: 100%;
+    -fx-min-width: 440px;
+    -fx-max-width:440px ;
     -fx-min-height: 49.0px;
     -fx-border-width: 3px;
     -fx-border-style: dashed ;
@@ -25,19 +26,38 @@
     -fx-background-color: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2), rgba(255,255,255,0.24), rgba(255,255,255,0.1));
 }
 
+#elevator{
+	
+	-fx-max-height: 46.0px;
+    -fx-min-width: 70px;
+    -fx-max-width:70px ;
+    -fx-min-height: 46.0px;
+    -fx-border-width: 3px;
+    -fx-border-style: solid ;
+    -fx-border-color:white; 
+    -fx-padding: 7px;
+	-fx-background-color: #4F8686;
+}
+
 .button{
 	 -fx-font-family: 'FontAwesome';
 	 -fx-background-color: rgba(255,255,255,0.01);
 	 -fx-border-radius: 5;
 	 -fx-background-radius: 5;
-	 -fx-text-fill: white;
+	 -fx-text-fill: rgba(255, 255, 255, 0.3);
 	 -fx-pref-height: 3px;
 	 -fx-pref-width: 3px;
 	 
 }
+.button:pressed {
+	-fx-text-fill: #33ff44;
+}
+.button:hover { 
+    -fx-background-color:  #333333;
+}
 
-.label{
+.label, #numFlor{
 	-fx-font-size: 24.0;
 	-fx-padding: 2px;
-	-fx-text-fill: white;
+	-fx-text-fill: rgba(255, 255, 255, 0.3);
 }

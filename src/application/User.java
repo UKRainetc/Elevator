@@ -5,8 +5,8 @@ import javafx.scene.control.Label;
 
 public class User extends Label {
 
-	private int currentFloor = 0;
-	private int destinationFloor = 0;
+	private int currentFloor;
+	private int destinationFloor;
 	private static String MALE = "\uf182";
 	private static String FAMELE = "\uf183";
 

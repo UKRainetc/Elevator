@@ -12,7 +12,7 @@ public class Floor extends HBox {
 	private Label numFloor;
 	private ArrayList<User> users;
 	private User user;
-	private int number = 0;
+	private int number;
 	private Button butUp;
 	private Button butDown;
 	private Button butPuf;
@@ -21,15 +21,34 @@ public class Floor extends HBox {
 		this.number = number;
 		setPadding(new Insets(15, 12, 15, 12));
 //		setMargin(this, new Insets(12,12,12,12));
-		setId("hbox");
+		setId("floor");
 		addNumFloor();
 		getChildren().add(numFloor);
 		addButton();
-		addUsers();
+//		addUsers();
+		numFloor.setId("numFlor");
 
 		// setAlignment(Pos.BOTTOM_RIGHT);
 
 	}
+	
+	
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Floor [number=" + number + "]";
+	}
+
+
+
+	public int getNumber() {
+		return number;
+	}
+
+
 
 	public void addButton() {
 		butUp = new Button("\uf01b");
@@ -38,10 +57,18 @@ public class Floor extends HBox {
 		butPuf.isDisable();
 		
 		if (number == 0) {
+			butPuf.setMaxSize(27,23);
+			butPuf.setMinSize(27, 23);
+			butPuf.setPrefSize(27, 23);
 			getChildren().addAll(butUp,butPuf);
 		} else if(number == 7) {
+//			butPuf.setPadding(new Insets(15));
+			butPuf.setMaxSize(27,23);
+			butPuf.setMinSize(27, 23);
+			butPuf.setPrefSize(27, 23);
 			getChildren().addAll(butPuf,butDown);
 		}else{
+			
 			getChildren().addAll(butUp, butDown);
 		}
 		// добавить условие для последнего етажа
@@ -52,16 +79,17 @@ public class Floor extends HBox {
 
 	}
 	
-	public void addUsers(){
-		users = new ArrayList<User>();
-		users.add(new User(0, 1));
-		users.add(new User(0, 2));
-		users.add(new User(0, 3));
-		users.add(new User(0, 4));
-		users.add(new User(0, 5));
-		users.add(new User(0, 3));
-		users.add(new User(0, 3));
-		getChildren().addAll(users);
+	public void addUsers(User user){
+//		users = new ArrayList<User>();
+//		users.add(user);
+//		users.add(new User(0, 1));
+//		users.add(new User(0, 2));
+//		users.add(new User(0, 3));
+//		users.add(new User(0, 4));
+//		users.add(new User(0, 5));
+//		users.add(new User(0, 3));
+//		users.add(new User(0, 3));
+		getChildren().add(user);
 	}
 
 }
