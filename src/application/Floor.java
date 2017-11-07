@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -80,8 +81,20 @@ public class Floor extends HBox {
 	}
 	
 	public void addUsers(User user){
-//		users = new ArrayList<User>();
-//		users.add(user);
+		System.out.println("Start add User on class Floor");
+	users = new ArrayList<User>();
+	users.add(user);
+	System.out.println("Add in ArrayList");
+	for (Iterator<User> iterator = users.iterator(); iterator.hasNext();) {
+		Object type = (Object) iterator.next();
+		System.out.println("1"+type);
+	}
+	
+	for (User us : users) {
+		System.out.println("2"+us);
+		this.getChildren().add(us);
+		System.out.println("3"+us);
+	}	
 //		users.add(new User(0, 1));
 //		users.add(new User(0, 2));
 //		users.add(new User(0, 3));
@@ -89,7 +102,9 @@ public class Floor extends HBox {
 //		users.add(new User(0, 5));
 //		users.add(new User(0, 3));
 //		users.add(new User(0, 3));
-		getChildren().add(user);
+	
+//		getChildren().add(new User(1, 3));
+		System.out.println("User add on class Floor");
 	}
 
 }

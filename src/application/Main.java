@@ -53,7 +53,7 @@ public class Main extends Application {
 
 		BorderPane border = new BorderPane();
 		Pane panel = new Pane();
-		VBox build = new VBox();
+		Building build = new Building();
 		Elevator elevator = new Elevator(0);
 		
 //		for (int i = 7; i >= 0; i--) {
@@ -70,15 +70,15 @@ public class Main extends Application {
 //		Floor f7 = new Floor(7);
 		
 //		build.getChildren().addAll(f7,f6,f5,f4,f3,f2,f1,f0);
-		MoveUser mu = new MoveUser(build);
-		build.getChildren().addAll(mu.getFloors());
+		new Thread(new MoveUser(build)).start();
+//		build.getChildren().addAll(mu.getFloors());
 //		mu.addUser(f0);
-		try {
-			mu.call();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			mu.call();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 //		elevator.setLayoutX(300.0);
 //		elevator.setLayoutY(345.0);
 		elevator.setCurentFloor(5);
